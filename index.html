@@ -8,7 +8,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>TheDogeBot</title>
     <link rel="icon" type="image/png"
-        href="https://raw.githubusercontent.com/fabiopolancoe/Dashboard_TheDogeBot/master/dogebot_favicon.png"
+        href="dogebot_favicon.png"
         sizes="16x16px" />
     <style type="text/css">
         .column {
@@ -114,22 +114,18 @@
             sepia: 10
         });
 
-        DarkReader.auto(true);
+        DarkReader.auto(false);
 
-    </script>
-
-    <script>
         function setLight() {
-            DarkReader.auto(false);
+            DarkReader.disable();
         }
 
         function setDark() {
-            DarkReader.auto(true);
+            DarkReader.enable();
         }
     </script>
-    </script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="https://raw.githubusercontent.com/fabiopolancoe/Dashboard_TheDogeBot/master/dogebot_navbar_icon.png"
+        <img src="dogebot_navbar_icon.png"
             width="50px" height="50px"></img>
         <a class="navbar-brand">TheDogeBot</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -181,15 +177,16 @@
     <p style="text-align: center;">Aquí podrás contribuir a la programación del bot, agregarlo a tu servidor de Discord,
         Donar si te gusta, Clonar o
         contibuir al Bot o al Dashboard y controlar al bot si ya se unió al servidor.</p>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <a class="btn btn-primary" href="https://discord.gg/AvQ9dEy" role="button" target="_blank" rel="noopener noreferrer">Servidor del bot en Discord</a>
-        <a class="btn btn-secondary" href="#" role="button" target="_blank" rel="noopener noreferrer">Repositorio de Github del Bot</a>
-        <a class="btn btn-success" href="https://github.com/fabiopolancoe/Dashboard_TheDogeBot" role="button" target="_blank" rel="noopener noreferrer">Repositorio de Github del Dashboard</a>
-        <a class="btn btn-danger" href="#" role="button" target="_blank" rel="noopener noreferrer">Invitar al bot</a>
-        <a class="btn btn-warning" href="#" role="button" target="_blank" rel="noopener noreferrer">Donar</a>
-        <a class="btn btn-info" href="#" role="button" target="_blank" rel="noopener noreferrer">Iniciar sesión con Discord</a>
-    <hr size="20">
-    <footer style="text-align: center;">2020 TheDogeBot Community by KJC-Hints & Hinters<footer>
+        <p></p>
+        <div style="padding: 8px;">
+           <a class="btn btn-primary" href="https://discord.gg/AvQ9dEy" role="button" target="_blank" rel="noopener noreferrer">Servidor del bot en Discord</a>
+           <a class="btn btn-secondary" href="https://github.com/knibble/DogeBot" role="button" target="_blank" rel="noopener noreferrer">Repositorio de Github del Bot</a>
+           <a class="btn btn-success" href="https://github.com/fabiopolancoe/Dashboard_TheDogeBot" role="button" target="_blank" rel="noopener noreferrer">Repositorio de Github del Dashboard</a>
+           <a class="btn btn-danger" href="#" role="button" target="_blank" rel="noopener noreferrer">Invitar al bot</a>
+           <a class="btn btn-warning" href="#" role="button" target="_blank" rel="noopener noreferrer">Donar</a>
+           <a class="btn btn-info" href="#" role="button" target="_blank" rel="noopener noreferrer">Iniciar sesión con Discord</a>
+    <hr>
+    <footer style="text-align: center;">2020 TheDogeBot Community by KJCHints & Hinters<footer>
 </body>
 
 </html>
