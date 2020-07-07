@@ -1,199 +1,175 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>TheDogeBot</title>
-    <link rel="icon" type="image/png"
-        href="dogebot_favicon.png"
-        sizes="16x16px" />
-    <style type="text/css">
-        .column {
-            float: left;
-            width: 50%;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>DogeBot</title>
+        <link rel="icon" type="text/png" href="assets/dogebot_favicon.png">
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik&display=swap');
 
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-    </style>
-    <style type="text/css">
-        /* The switch - the box around the slider */
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
+            body {
+                text-align: center;
+                font-family: 'Rubik', sans-serif;
+            }
 
-        /* Hide default HTML checkbox */
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
+            nav, footer, a, button {
+                font-size: 20px;
+                font-style: bold;
+                font-family: 'Pangolin', cursive;
+            }
 
-        /* The slider */
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
+            .column {
+                float: left;
+                width: 50%;
+            }
 
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
 
-        input:checked+.slider {
-            background-color: #2196F3;
-        }
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+            }
 
-        input:focus+.slider {
-            box-shadow: 0 0 1px #2196F3;
-        }
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
 
-        input:checked+.slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
 
-        /* Rounded sliders */
-        .slider.round {
-            border-radius: 34px;
-        }
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
 
-        .slider.round:before {
-            border-radius: 50%;
-        }
-    </style>
-</head>
+            input:checked+.slider {
+                background-color: #2196F3;
+            }
 
-<body style="align-content: center;">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/darkreader/darkreader.min.js"></script>
-    <script>
-        DarkReader.enable({
+            input:focus+.slider {
+                box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked+.slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+
+            .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            DarkReader.enable({
             brightness: 100,
             contrast: 90,
             sepia: 10
-        });
-        DarkReader.disable();
-
-        DarkReader.auto({
-            brightness: 100,
-            contrast: 90,
-            sepia: 10
-        });
-
-        DarkReader.auto(false);
-
-        function setLight() {
+            });
             DarkReader.disable();
-        }
 
-        function setDark() {
+            DarkReader.auto({
+            brightness: 100,
+            contrast: 90,
+            sepia: 10
+            });
+
+            DarkReader.auto(false);
+
+            function setLight() {
+            DarkReader.disable();
+            }
+
+            function setDark() {
             DarkReader.enable();
-        }
-    </script>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="dogebot_navbar_icon.png"
-            width="50px" height="50px"></img>
-        <a class="navbar-brand">TheDogeBot</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            }
+        </script>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="assets/dogebot_navbar_icon.png" width="65px" height="50px"></img>
+            <a class="navbar-brand">DogeBot</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Configuración<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Música<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown test
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" onselect="es()">Algo</a>
-                        <a class="dropdown-item" onselect="en()">Algo más</a>
-                    </div>
-                </li>
-                <button class="btn btn-light" onclick="setLight()">Light Theme</button>
-                <button class="btn btn-dark" onclick="setDark()">Dark Theme</button>
-            </ul>
-            <button type="button" class="btn btn-success">Invitar</button>&npsp;<button type="button" class="btn btn-primary">Donar</button>
-        </div>
-    </nav>
-    <h1 style="text-align: center;">
-        ¡Bienvenido a TheDogeBot Dashboard!
-    </h1>
-    <br>
-    <h3 style="text-align: center;">
-        ¿Qué es ésto?
-    </h3>
-    </br>
-    <h2 style="text-align: center;">The DogeBot - Discord Bot Multipropósito</h2>
-    <p style="text-align: center;">Bot Multipropósito de código abierto para Discord,
-        con amplias funcionalidades. Desarrollado inicialmente por <a href="https://github.com/KelviNosse/">KelviNosse</a>, con colaboraciónes por parte de
-        TheDogeBot Community.</p>
-    <p></p>
-    <p style="text-align: center;">Este sitio fue desarrollado por <a href="https://github.com/fabiopolancoe/">Fabio Polanco</a>, o sea, yo :v</p>
-    <p></p>
-    <p style="text-align: center;">Aquí podrás contribuir a la programación del bot, agregarlo a tu servidor de Discord,
-        Donar si te gusta, Clonar o
-        contibuir al Bot o al Dashboard y controlar al bot si ya se unió al servidor.</p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+                    </li>
+                    <button class="btn btn-light" onclick="setLight()">Light Theme</button>&nbsp;<button class="btn btn-dark" onclick="setDark()">Dark Theme</button>
+                </ul>
+                <button type="button" class="btn btn-success">Invitar</button>&nbsp;<button type="button" class="btn btn-primary">Donar</button>
+            </div>
+        </nav>
+        <h1>¡Bienvenido a DogeBot Dashboard!</h1>
+        <br>
+        <h3>¿Qué es ésto?</h3>
+        </br>
+        <p style="padding: 8px;">Dogebot es un bot Multipropósito de código abierto para Discord diseñado inicialmente para funcionar en el servidor de Discord del canal de YouTube <a href="https://www.youtube.com/user/tombdetective">KJCHints</a>. Éste bot fué desarrollado inicialmente por <a href="https://github.com/KelviNosse/">KelviNosse</a>, con colaboraciónes por parte de DogeBot Community. Aquí podrás contribuir a la programación del bot, agregarlo a tu servidor de Discord, Donar si te gusta, Clonar o contibuir al Bot o al Dashboard y controlar al bot si ya se unió al servidor.</p>
         <p></p>
-        <div style="padding: 8px; text-align: center;">
-           <a class="btn btn-primary" href="https://discord.gg/AvQ9dEy" role="button" target="_blank" rel="noopener noreferrer">Servidor del bot en Discord</a>
-           <p></p>
-           <a class="btn btn-secondary" href="https://github.com/knibble/DogeBot" role="button" target="_blank" rel="noopener noreferrer">Repositorio de Github del Bot</a>
-           <p></p>
-           <a class="btn btn-success" href="https://github.com/fabiopolancoe/Dashboard_TheDogeBot" role="button" target="_blank" rel="noopener noreferrer">Repositorio de Github del Dashboard</a>
-           <p></p>
-           <a class="btn btn-danger" href="#" role="button" target="_blank" rel="noopener noreferrer">Invitar al bot</a>
-           <p></p>
-           <a class="btn btn-warning" href="#" role="button" target="_blank" rel="noopener noreferrer">Donar</a>
-           <p></p>
-           <a class="btn btn-info" href="#" role="button" target="_blank" rel="noopener noreferrer">Iniciar sesión con Discord</a>
-           <p></p>
-    <hr>
-    <footer style="text-align: center;">2020 TheDogeBot Community by KJCHints & Hinters<footer>
-</body>
+        <div style="padding: 8px;">
+            <a class="btn btn-primary" href="https://discord.gg/AvQ9dEy" role="button" rel="noopener noreferrer">Servidor de Discord de DogeBot Community</a>
+            <p></p>
+            <a class="btn btn-secondary" href="https://github.com/knibble/DogeBot" role="button" rel="noopener noreferrer">Repositorio de Github del Bot</a>
+            <p></p>
+            <a class="btn btn-success" href="https://github.com/fabiopolancoe/Dashboard_TheDogeBot" role="button" rel="noopener noreferrer">Repositorio de Github del Dashboard</a>
+            <p></p>
+            <a class="btn btn-danger" href="#" role="button" rel="noopener noreferrer">Invitar al bot</a>
+            <p></p>
+            <a class="btn btn-warning" href="#" role="button" rel="noopener noreferrer">Donar</a>
+            <p></p>
+            <a class="btn btn-info" href="dashboard" role="button" rel="noopener noreferrer">Ir al dashboard</a>
+            <p></p>
+        </div>
+        <hr>
+        <footer style="text-align: center;">
+            <p>2020 DogeBot Community by KJCHints & Hinters</p>
+            <p>Este sitio fue desarrollado por <a href="https://github.com/fabiopolancoe/">Fabio Polanco</a> utilizando <span class="badge badge-primary">HTML</span>,  <span class="badge badge-success">CSS</span>, <span class="badge badge-danger">JavaScript</span>, <span class="badge badge-info">Vue.JS</span> y <span class="badge badge-warning">PHP</span>.</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/darkreader/darkreader.min.js"></script>
+    </body>
 
 </html>
